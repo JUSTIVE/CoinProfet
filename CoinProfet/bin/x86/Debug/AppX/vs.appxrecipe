@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>070f55fa-3f28-4ca8-9da3-f1a426c632ba</PackageIdentityName>
     <PackageIdentityPublisher>CN=KimMinSang</PackageIdentityPublisher>
-    <IntermediateOutputPath>c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>E68EAFDE0A7FB00FCE982D76BFF6B3D1CE469A2285143471BA40CE3E798AFDC8</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>070f55fa-3f28-4ca8-9da3-f1a426c632ba_1.0.0.0_x86__776bntya38ep2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>070f55fa-3f28-4ca8-9da3-f1a426c632ba_776bntya38ep2!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-14T15:03:01.944</Modified>
+      <Modified>2018-01-15T23:06:22.746</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.exe">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.exe">
       <PackagePath>entrypoint\CoinProfet.exe</PackagePath>
-      <Modified>2018-01-14T15:03:01.549</Modified>
+      <Modified>2018-01-15T23:06:22.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\.nuget\packages\HtmlAgilityPack\1.6.13\lib\uap10.0\HtmlAgilityPack.dll">
       <PackagePath>HtmlAgilityPack.dll</PackagePath>
@@ -511,45 +511,45 @@
       <PackagePath>System.Xml.XPath.XmlDocument.dll</PackagePath>
       <Modified>2016-11-04T19:57:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-01-14T13:11:08.103</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.xr.xml">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.xr.xml">
       <PackagePath>CoinProfet.xr.xml</PackagePath>
       <Modified>2018-01-14T13:53:30.871</Modified>
     </AppxPackagedFile>
@@ -557,14 +557,14 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-07-20T15:22:51.586</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-14T14:45:39.648</Modified>
+      <Modified>2018-01-15T23:06:03.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\CoinProfet.exe">
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\CoinProfet.exe">
       <PackagePath>CoinProfet.exe</PackagePath>
-      <Modified>2018-01-14T15:03:01.938</Modified>
+      <Modified>2018-01-15T23:06:22.739</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

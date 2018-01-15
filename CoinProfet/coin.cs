@@ -18,5 +18,6 @@ namespace CoinProfet
             ADA,GRS,SBD,KMD,STORJ,
             MER,POWR,EMC2,TIX
         }
+        public List<Candle> candles;
     }
 }

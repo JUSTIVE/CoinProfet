@@ -23380,10 +23380,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\benkim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
+      "projectUniqueName": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
       "projectName": "CoinProfet",
-      "projectPath": "c:\\users\\benkim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
-      "outputPath": "c:\\users\\benkim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\obj\\",
+      "projectPath": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
+      "outputPath": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.14393"

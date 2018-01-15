@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using HtmlAgilityPack;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Windows.Data.Json;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace CoinProfet
@@ -24,7 +26,7 @@ namespace CoinProfet
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
+        Coin BTC;
         public MainPage()
         {
             this.InitializeComponent();  
@@ -39,23 +41,31 @@ namespace CoinProfet
             //label.Text = currentDateFormatter();
             return "https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/" + duration + "?code=CRIX.UPBIT.KRW-" + coin.ToString() + "&count=1";
         }
-        void LoadWebAsync()
+
+        async Task LoadWebAsync()
         {
-            string Link = UpBitAPIgenerator(Coin.CoinType.BTC, "10", currentDateFormatter());
-            HtmlWeb web = new HtmlWeb();
-            HtmlDocument doc = web.Load(Link);
-            string labelText = "null";
-            try { 
-                HtmlNodeCollection nodecollection = doc.DocumentNode.SelectNodes("/html/body/pre");
+            var Link = @UpBitAPIgenerator(Coin.CoinType.BTC, "10", currentDateFormatter());
+            var client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(new Uri(Link));
+            
+            var jsonString = await response.Content.ReadAsStringAsync();
+            JsonArray root = JsonValue.Parse(jsonString).GetArray();
+            for(uint i = 0;i<root.Count;i++)
+            {
+                BTC.candles.Last().code = root.GetObjectAt(i).GetNamedString("code");
+                BTC.candles.Last().candleDateTime = DateTime.Parse(root.GetObjectAt(i).GetNamedString("candleDateTime"));
+                BTC.candles.Last().tradePrice = double.Parse(root.GetObjectAt(i).GetNamedString("tradePrice"));
             }
-            catch (NullReferenceException) { 
-            }
-            label.Text = labelText;
+            
+            label.Text = BTC.candles.Last().tradePrice.ToString();
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_LoadedAsync(object sender, RoutedEventArgs e)
         {
-            LoadWebAsync();
+
+            await LoadWebAsync();
+            
         }
+        
     }
 }

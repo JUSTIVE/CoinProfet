@@ -1,1 +1,1 @@
-c:\users\benkim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\CoinProfet.csproj;x86
+C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\CoinProfet.csproj;x86

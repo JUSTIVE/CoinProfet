@@ -28,7 +28,7 @@ namespace CoinProfet
                 {
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)(target);
                     #line 8 "..\..\..\MainPage.xaml"
-                    ((global::Windows.UI.Xaml.Controls.Page)element1).Loaded += this.Page_Loaded;
+                    ((global::Windows.UI.Xaml.Controls.Page)element1).Loaded += this.Page_LoadedAsync;
                     #line default
                 }
                 break;
