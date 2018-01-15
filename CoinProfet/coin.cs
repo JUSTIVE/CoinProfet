@@ -8,15 +8,16 @@ namespace CoinProfet
 {
     class Coin
     {
+        public static List<Coin> coins = new List<Coin>();
         public enum CoinType
         {
-            SNT,ETC,NEO,BCC,ETH,
-            ZEC,XMR,BTC,BTG,WAVES,
-            QTUM,LSK,STRAT,LTC,DASH,
-            XRP,VTC,XLM,PIVX,ARK,
-            XEM,STEEM,OMG,REP,MTL,
-            ADA,GRS,SBD,KMD,STORJ,
-            MER,POWR,EMC2,TIX
+            SNT,ETC,NEO,BCC,ETH,  //5
+            ZEC,XMR,BTC,BTG,WAVES, //5
+            QTUM,LSK,STRAT,LTC,DASH,//5
+            XRP,VTC,XLM,PIVX,ARK,//5
+            XEM,STEEM,OMG,REP,MTL,//5
+            ADA,GRS,SBD,KMD,STORJ,//5
+            MER,POWR,EMC2,TIX//4
         }
         public List<Candle> candles;
     }

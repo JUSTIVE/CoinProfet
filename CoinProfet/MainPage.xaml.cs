@@ -36,36 +36,43 @@ namespace CoinProfet
         {
             return DateTime.Now.ToString("yyyy-MM-dd");
         }
-        string UpBitAPIgenerator(Coin.CoinType coin,string duration, string currentdate)
+        string UpBitAPIgenerator(Coin.CoinType coin,int duration, string currentdate,int amount=1)
         {
             //label.Text = currentDateFormatter();
             return "https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/" + duration + "?code=CRIX.UPBIT.KRW-" + coin.ToString() + "&count=1";
         }
 
-        async Task LoadWebAsync()
+        async Task loadCoinData(Coin.CoinType coinType,int duration)
         {
-            var Link = @UpBitAPIgenerator(Coin.CoinType.BTC, "10", currentDateFormatter());
+            var Link = UpBitAPIgenerator(coinType, duration, currentDateFormatter());
             var client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(new Uri(Link));
             
             var jsonString = await response.Content.ReadAsStringAsync();
-            JsonArray root = JsonValue.Parse(jsonString).GetArray();
-            for(uint i = 0;i<root.Count;i++)
+            JsonObject root = JsonObject.Parse(jsonString).GetObject();
+            Coin c = new Coin();
+            //for(uint i = 0;i<root.Count;i++)
             {
-                BTC.candles.Last().code = root.GetObjectAt(i).GetNamedString("code");
-                BTC.candles.Last().candleDateTime = DateTime.Parse(root.GetObjectAt(i).GetNamedString("candleDateTime"));
-                BTC.candles.Last().tradePrice = double.Parse(root.GetObjectAt(i).GetNamedString("tradePrice"));
+                c.candles.Last().code = root.GetNamedString("code");
+                c.candles.Last().candleDateTime = DateTime.Parse(root.GetNamedString("candleDateTime"));
+                c.candles.Last().tradePrice = double.Parse(root.GetNamedString("tradePrice"));
             }
-            
+            Coin.coins.Add(c);
             label.Text = BTC.candles.Last().tradePrice.ToString();
         }
 
         private async void Page_LoadedAsync(object sender, RoutedEventArgs e)
         {
-
-            await LoadWebAsync();
-            
+            try {
+                foreach(Coin.CoinType coinType in Enum.GetValues(typeof(Coin.CoinType))) { 
+                    await loadCoinData(coinType, 10);
+                }
+            }
+            catch (Exception exception)
+            {
+                label.Text = exception.ToString();
+            }
         }
-        
+
     }
 }
