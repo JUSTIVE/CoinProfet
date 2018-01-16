@@ -5,10 +5,13 @@
     xmlns:local="using:CoinProfet"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded">
+    mc:Ignorable="d" Loaded="Page_Loaded" Height="870.294" Width="1366.419">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-823,-103">
-        <TextBlock x:Name="label" HorizontalAlignment="Left" Margin="79,173,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    <Grid Background="#FF303030" Margin="0">
+        <TextBlock x:Name="tradePrice" HorizontalAlignment="Left" Margin="307,83,0,0" TextWrapping="Wrap" Text="19,300,000" VerticalAlignment="Top" Height="50" Width="232" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black"/>
+        <ListView HorizontalAlignment="Left" Height="850" VerticalAlignment="Top" Width="300"/>
+        <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Margin="301,10,0,10" Width="1" Background="White"/>
+        <TextBlock x:Name="coinName" HorizontalAlignment="Left" Margin="307,10,0,0" TextWrapping="Wrap" Text="BTC" VerticalAlignment="Top" Height="105" Width="154" FontSize="72" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black"/>
 
     </Grid>
 </Page>

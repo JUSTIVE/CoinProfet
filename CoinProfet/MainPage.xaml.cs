@@ -58,10 +58,10 @@ namespace CoinProfet
                 c.candles.Last().tradePrice = double.Parse(root.GetNamedString("tradePrice"));
             }
             Coin.coins.Add(c);
-            label.Text = BTC.candles.Last().tradePrice.ToString();
+            tradePrice.Text = BTC.candles.Last().tradePrice.ToString();
         }
 
-        private async void Page_LoadedAsync(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             try {
                 foreach(Coin.CoinType coinType in Enum.GetValues(typeof(Coin.CoinType))) { 
@@ -70,7 +70,7 @@ namespace CoinProfet
             }
             catch (Exception exception)
             {
-                label.Text = exception.ToString();
+                tradePrice.Text = exception.ToString();
             }
         }
 
