@@ -20,5 +20,9 @@ namespace CoinProfet
             MER,POWR,EMC2,TIX//4
         }
         public List<Candle> candles;
+        public Coin()
+        {
+            candles = new List<Candle>();
+        }
     }
 }

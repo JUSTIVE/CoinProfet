@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-15T23:48:27.126</Modified>
+      <Modified>2018-01-17T13:57:45.713</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.exe">
       <PackagePath>entrypoint\CoinProfet.exe</PackagePath>
-      <Modified>2018-01-15T23:48:26.272</Modified>
+      <Modified>2018-01-17T13:57:45.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\.nuget\packages\HtmlAgilityPack\1.6.13\lib\uap10.0\HtmlAgilityPack.dll">
       <PackagePath>HtmlAgilityPack.dll</PackagePath>
@@ -560,11 +560,11 @@
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-15T23:48:26.832</Modified>
+      <Modified>2018-01-17T13:49:56.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\CoinProfet.exe">
       <PackagePath>CoinProfet.exe</PackagePath>
-      <Modified>2018-01-15T23:48:27.119</Modified>
+      <Modified>2018-01-17T13:57:45.705</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

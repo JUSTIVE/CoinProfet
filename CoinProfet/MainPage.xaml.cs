@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Windows.Data.Json;
+using System.Text.RegularExpressions;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace CoinProfet
@@ -46,19 +47,29 @@ namespace CoinProfet
         {
             var Link = UpBitAPIgenerator(coinType, duration, currentDateFormatter());
             var client = new HttpClient();
+            var c = new Coin();
             HttpResponseMessage response = await client.GetAsync(new Uri(Link));
             
-            var jsonString = await response.Content.ReadAsStringAsync();
-            JsonObject root = JsonObject.Parse(jsonString).GetObject();
-            Coin c = new Coin();
-            //for(uint i = 0;i<root.Count;i++)
-            {
-                c.candles.Last().code = root.GetNamedString("code");
-                c.candles.Last().candleDateTime = DateTime.Parse(root.GetNamedString("candleDateTime"));
-                c.candles.Last().tradePrice = double.Parse(root.GetNamedString("tradePrice"));
+            string jsonString = await response.Content.ReadAsStringAsync();
+            jsonString = jsonString.Replace(@"\", " ");
+            try { 
+                JsonArray root = JsonValue.Parse(jsonString).GetArray();
+                for (uint i = 0; i < root.Count; i++)
+                {
+                    Candle candle = new Candle();
+                    candle.code = root.GetObjectAt(i).GetNamedString("code");
+                    candle.candleDateTime = DateTime.Parse(root.GetObjectAt(i).GetNamedString("candleDateTime"));
+                    candle.tradePrice = root.GetObjectAt(i).GetNamedNumber("tradePrice");
+                    c.candles.Add(candle);
+                }
+                Coin.coins.Add(c);
             }
-            Coin.coins.Add(c);
-            tradePrice.Text = BTC.candles.Last().tradePrice.ToString();
+            catch(Exception ex)
+            {
+                logger.Text += ex.ToString();
+            }
+            if(coinType== Coin.CoinType.BTC)
+                tradePrice.Text = Coin.coins[(int)Coin.CoinType.BTC].candles.Last().tradePrice.ToString();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -70,7 +81,7 @@ namespace CoinProfet
             }
             catch (Exception exception)
             {
-                tradePrice.Text = exception.ToString();
+                //logger.Text = exception.ToString();
             }
         }
 
