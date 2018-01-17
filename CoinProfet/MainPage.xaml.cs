@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Windows.Data.Json;
 using System.Text.RegularExpressions;
+using Windows.ApplicationModel.Core;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace CoinProfet
@@ -27,10 +28,11 @@ namespace CoinProfet
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Coin BTC;
+        
         public MainPage()
         {
-            this.InitializeComponent();  
+            this.InitializeComponent();
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
         }
 
         string currentDateFormatter()
@@ -47,7 +49,7 @@ namespace CoinProfet
         {
             var Link = UpBitAPIgenerator(coinType, duration, currentDateFormatter());
             var client = new HttpClient();
-            var c = new Coin();
+            var c = new Coin(coinType.ToString());
             HttpResponseMessage response = await client.GetAsync(new Uri(Link));
             
             string jsonString = await response.Content.ReadAsStringAsync();
@@ -62,26 +64,46 @@ namespace CoinProfet
                     candle.tradePrice = root.GetObjectAt(i).GetNamedNumber("tradePrice");
                     c.candles.Add(candle);
                 }
-                Coin.coins.Add(c);
+                Coin.coins[(int)coinType]=c;
             }
             catch(Exception ex)
             {
                 logger.Text += ex.ToString();
             }
-            if(coinType== Coin.CoinType.BTC)
-                tradePrice.Text = Coin.coins[(int)Coin.CoinType.BTC].candles.Last().tradePrice.ToString();
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            { 
+                if (coinType == Coin.CoinType.SNT) { 
+                    coinName.Text = Coin.coins[(int)coinType].name;
+                    tradePrice.Text = Coin.coins[(int)coinType].candles.Last().tradePrice.ToString();
+                }
+            });
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            try {
-                foreach(Coin.CoinType coinType in Enum.GetValues(typeof(Coin.CoinType))) { 
-                    await loadCoinData(coinType, 10);
-                }
-            }
-            catch (Exception exception)
+            await Task.Run(() => UpdateInfo());
+        }
+        private async void UpdateInfo()
+        {
+            while (true)
             {
-                //logger.Text = exception.ToString();
+                try
+                {
+                    foreach (Coin.CoinType coinType in Enum.GetValues(typeof(Coin.CoinType)))
+                    {
+                        await loadCoinData(coinType, 10);
+                    }
+                }
+
+                catch (Exception exception)
+                {
+
+                }
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
+                    //logger.Text += "running\n";
+                });
+                
+                await Task.Delay(300);
             }
         }
 

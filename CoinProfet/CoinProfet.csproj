@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Candle.cs" />
     <Compile Include="Coin.cs" />
+    <Compile Include="CoinListViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

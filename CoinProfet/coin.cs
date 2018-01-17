@@ -8,7 +8,7 @@ namespace CoinProfet
 {
     class Coin
     {
-        public static List<Coin> coins = new List<Coin>();
+        public static Coin[] coins = new Coin[34];
         public enum CoinType
         {
             SNT,ETC,NEO,BCC,ETH,  //5
@@ -20,9 +20,16 @@ namespace CoinProfet
             MER,POWR,EMC2,TIX//4
         }
         public List<Candle> candles;
+        //public double currentPrice;
+        public string name { get; set; }
+
         public Coin()
         {
             candles = new List<Candle>();
+        }
+        public Coin(string name):this()
+        {   
+            this.name = name;
         }
     }
 }
