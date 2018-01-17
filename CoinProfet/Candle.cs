@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoinProfet
 {
-    class Candle
+    public class Candle
     {
         public string code { get; set; }
         public DateTime candleDateTime { get; set; }

@@ -26,6 +26,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
@@ -41,6 +42,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
