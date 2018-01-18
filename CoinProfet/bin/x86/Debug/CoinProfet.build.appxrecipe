@@ -382,8 +382,107 @@
     <AppxPackagedFile Include="C:\Users\BenKim\.nuget\packages\System.Xml.XPath.XmlDocument\4.3.0\lib\netstandard1.3\System.Xml.XPath.XmlDocument.dll">
       <PackagePath>System.Xml.XPath.XmlDocument.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ADA.png">
+      <PackagePath>Assets\coinImgres\ADA.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ARK.png">
+      <PackagePath>Assets\coinImgres\ARK.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BCC.png">
+      <PackagePath>Assets\coinImgres\BCC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BTC.png">
+      <PackagePath>Assets\coinImgres\BTC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BTG.png">
+      <PackagePath>Assets\coinImgres\BTG.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\DASH.png">
+      <PackagePath>Assets\coinImgres\DASH.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\EMC2.png">
+      <PackagePath>Assets\coinImgres\EMC2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ETC.png">
+      <PackagePath>Assets\coinImgres\ETC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ETH.png">
+      <PackagePath>Assets\coinImgres\ETH.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\GRS.png">
+      <PackagePath>Assets\coinImgres\GRS.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\KMD.png">
+      <PackagePath>Assets\coinImgres\KMD.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\LSK.png">
+      <PackagePath>Assets\coinImgres\LSK.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\LTC.png">
+      <PackagePath>Assets\coinImgres\LTC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\MER.png">
+      <PackagePath>Assets\coinImgres\MER.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\MTL.png">
+      <PackagePath>Assets\coinImgres\MTL.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\NEO.png">
+      <PackagePath>Assets\coinImgres\NEO.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\OMG.png">
+      <PackagePath>Assets\coinImgres\OMG.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\PIVX.png">
+      <PackagePath>Assets\coinImgres\PIVX.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\POWR.png">
+      <PackagePath>Assets\coinImgres\POWR.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\QTUM.png">
+      <PackagePath>Assets\coinImgres\QTUM.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\REP.png">
+      <PackagePath>Assets\coinImgres\REP.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\SBD.png">
+      <PackagePath>Assets\coinImgres\SBD.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\SNT.png">
+      <PackagePath>Assets\coinImgres\SNT.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STEEM.png">
+      <PackagePath>Assets\coinImgres\STEEM.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STORJ.png">
+      <PackagePath>Assets\coinImgres\STORJ.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STRAT.png">
+      <PackagePath>Assets\coinImgres\STRAT.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\TIX.png">
+      <PackagePath>Assets\coinImgres\TIX.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\VTC.png">
+      <PackagePath>Assets\coinImgres\VTC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\WAVES.png">
+      <PackagePath>Assets\coinImgres\WAVES.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XEM.png">
+      <PackagePath>Assets\coinImgres\XEM.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XLM.png">
+      <PackagePath>Assets\coinImgres\XLM.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XMR.png">
+      <PackagePath>Assets\coinImgres\XMR.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XRP.png">
+      <PackagePath>Assets\coinImgres\XRP.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ZEC.png">
+      <PackagePath>Assets\coinImgres\ZEC.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -411,6 +510,9 @@
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.xr.xml">
       <PackagePath>CoinProfet.xr.xml</PackagePath>

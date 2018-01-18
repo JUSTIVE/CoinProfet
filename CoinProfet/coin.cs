@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Data.Json;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace CoinProfet
 {
@@ -61,12 +65,22 @@ namespace CoinProfet
         public List<Candle> candles;
         //public double currentPrice;
         public string name { get; set; }
+        public string fullName { get; set; }
         public double prevDayTradePrice { get; set; }
-        public static async void initPrevDayTradePriceAsync()
+        public double tradePrice { get; set; }
+        public double deltaValue { get; set; }
+        public BitmapImage imgres;
+        public static void initCoin()
         {
-            for (int i = 0; i < coins.Length; i++)
+            for (int i = 0; i < 34; i++) { 
+                coins[i] = new Coin((CoinType)i);
+                //coins[i].imgres = new BitmapImage("Assets/coinImgres" + ((CoinType)i).ToString()+".png");
+            }
+        }
+        public static async void initPrevDayTradePriceAsync()
+        {   
+            for (int i = 0; i < 34; i++)
             {
-                coins[i] = new Coin(((CoinType)i).ToString());
                 var Link = MainPage.UpBitAPIprevDayGenerator((CoinType)i);
                 var client = new HttpClient();
                 HttpResponseMessage response = await client.GetAsync(new Uri(Link));
@@ -80,9 +94,28 @@ namespace CoinProfet
         {
             candles = new List<Candle>();
         }
-        public Coin(string name):this()
+        public Coin(CoinType name):this()
         {   
-            this.name = name;
+            this.name = name.ToString();
+            this.fullName = ((CoinFullName)(int)name).ToString();
         }
+        
+    }
+    public class CoinViewModel
+    {
+        public ObservableCollection<Coin> coins = new ObservableCollection<Coin>();
+        //public ObservableCollection<Coin> Coins { get { return this.coins; } set {coins = coin }; }
+
+        private void CoinsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            var x = e.NewItems;
+        }
+        public CoinViewModel(Coin[] coinList)
+        {
+            for (int i = 0; i < coinList.Length; i++)
+                this.coins.Add(coinList[i]);
+        }
+        
+
     }
 }

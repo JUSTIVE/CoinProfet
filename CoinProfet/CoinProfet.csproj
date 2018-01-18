@@ -97,7 +97,6 @@
     </Compile>
     <Compile Include="Candle.cs" />
     <Compile Include="Coin.cs" />
-    <Compile Include="CoinListViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -110,6 +109,40 @@
     <None Include="CoinProfet_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\coinImgres\ADA.png" />
+    <Content Include="Assets\coinImgres\ARK.png" />
+    <Content Include="Assets\coinImgres\BCC.png" />
+    <Content Include="Assets\coinImgres\BTC.png" />
+    <Content Include="Assets\coinImgres\BTG.png" />
+    <Content Include="Assets\coinImgres\DASH.png" />
+    <Content Include="Assets\coinImgres\EMC2.png" />
+    <Content Include="Assets\coinImgres\ETC.png" />
+    <Content Include="Assets\coinImgres\ETH.png" />
+    <Content Include="Assets\coinImgres\GRS.png" />
+    <Content Include="Assets\coinImgres\KMD.png" />
+    <Content Include="Assets\coinImgres\LSK.png" />
+    <Content Include="Assets\coinImgres\LTC.png" />
+    <Content Include="Assets\coinImgres\MER.png" />
+    <Content Include="Assets\coinImgres\MTL.png" />
+    <Content Include="Assets\coinImgres\NEO.png" />
+    <Content Include="Assets\coinImgres\OMG.png" />
+    <Content Include="Assets\coinImgres\PIVX.png" />
+    <Content Include="Assets\coinImgres\POWR.png" />
+    <Content Include="Assets\coinImgres\QTUM.png" />
+    <Content Include="Assets\coinImgres\REP.png" />
+    <Content Include="Assets\coinImgres\SBD.png" />
+    <Content Include="Assets\coinImgres\SNT.png" />
+    <Content Include="Assets\coinImgres\STEEM.png" />
+    <Content Include="Assets\coinImgres\STORJ.png" />
+    <Content Include="Assets\coinImgres\STRAT.png" />
+    <Content Include="Assets\coinImgres\TIX.png" />
+    <Content Include="Assets\coinImgres\VTC.png" />
+    <Content Include="Assets\coinImgres\WAVES.png" />
+    <Content Include="Assets\coinImgres\XEM.png" />
+    <Content Include="Assets\coinImgres\XLM.png" />
+    <Content Include="Assets\coinImgres\XMR.png" />
+    <Content Include="Assets\coinImgres\XRP.png" />
+    <Content Include="Assets\coinImgres\ZEC.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

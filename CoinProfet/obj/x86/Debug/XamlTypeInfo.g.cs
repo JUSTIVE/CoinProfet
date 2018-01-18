@@ -132,15 +132,19 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "CoinProfet.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "CoinProfet.CoinViewModel";
+            _typeNameTable[4] = "Object";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::CoinProfet.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::CoinProfet.CoinViewModel);
+            _typeTable[4] = typeof(global::System.Object);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -190,6 +194,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             case 0:   //  CoinProfet.MainPage
                 userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
+                userType.AddMemberName("coinViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -201,16 +206,47 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 3:   //  CoinProfet.CoinViewModel
+                userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Object
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
             }
             return xamlType;
         }
 
 
+        private object get_0_MainPage_coinViewModel(object instance)
+        {
+            var that = (global::CoinProfet.MainPage)instance;
+            return that.coinViewModel;
+        }
+        private void set_0_MainPage_coinViewModel(object instance, object Value)
+        {
+            var that = (global::CoinProfet.MainPage)instance;
+            that.coinViewModel = (global::CoinProfet.CoinViewModel)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "CoinProfet.MainPage.coinViewModel":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CoinProfet.MainPage");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "coinViewModel", "CoinProfet.CoinViewModel");
+                xamlMember.Getter = get_0_MainPage_coinViewModel;
+                xamlMember.Setter = set_0_MainPage_coinViewModel;
+                break;
+            }
             return xamlMember;
         }
     }

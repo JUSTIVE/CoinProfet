@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-17T18:06:33.642</Modified>
+      <Modified>2018-01-18T05:50:54.043</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.exe">
       <PackagePath>entrypoint\CoinProfet.exe</PackagePath>
-      <Modified>2018-01-17T18:06:32.964</Modified>
+      <Modified>2018-01-18T05:50:50.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\.nuget\packages\HtmlAgilityPack\1.6.13\lib\uap10.0\HtmlAgilityPack.dll">
       <PackagePath>HtmlAgilityPack.dll</PackagePath>
@@ -511,9 +511,141 @@
       <PackagePath>System.Xml.XPath.XmlDocument.dll</PackagePath>
       <Modified>2016-11-04T19:57:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-01-14T13:11:08.103</Modified>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ADA.png">
+      <PackagePath>Assets\coinImgres\ADA.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.772</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ARK.png">
+      <PackagePath>Assets\coinImgres\ARK.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.779</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BCC.png">
+      <PackagePath>Assets\coinImgres\BCC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.785</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BTC.png">
+      <PackagePath>Assets\coinImgres\BTC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.789</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\BTG.png">
+      <PackagePath>Assets\coinImgres\BTG.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.793</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\DASH.png">
+      <PackagePath>Assets\coinImgres\DASH.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.797</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\EMC2.png">
+      <PackagePath>Assets\coinImgres\EMC2.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.802</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ETC.png">
+      <PackagePath>Assets\coinImgres\ETC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.808</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ETH.png">
+      <PackagePath>Assets\coinImgres\ETH.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.813</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\GRS.png">
+      <PackagePath>Assets\coinImgres\GRS.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.821</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\KMD.png">
+      <PackagePath>Assets\coinImgres\KMD.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.825</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\LSK.png">
+      <PackagePath>Assets\coinImgres\LSK.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.829</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\LTC.png">
+      <PackagePath>Assets\coinImgres\LTC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.837</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\MER.png">
+      <PackagePath>Assets\coinImgres\MER.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.842</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\MTL.png">
+      <PackagePath>Assets\coinImgres\MTL.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.846</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\NEO.png">
+      <PackagePath>Assets\coinImgres\NEO.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.852</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\OMG.png">
+      <PackagePath>Assets\coinImgres\OMG.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\PIVX.png">
+      <PackagePath>Assets\coinImgres\PIVX.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\POWR.png">
+      <PackagePath>Assets\coinImgres\POWR.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.869</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\QTUM.png">
+      <PackagePath>Assets\coinImgres\QTUM.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.875</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\REP.png">
+      <PackagePath>Assets\coinImgres\REP.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\SBD.png">
+      <PackagePath>Assets\coinImgres\SBD.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\SNT.png">
+      <PackagePath>Assets\coinImgres\SNT.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.891</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STEEM.png">
+      <PackagePath>Assets\coinImgres\STEEM.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.898</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STORJ.png">
+      <PackagePath>Assets\coinImgres\STORJ.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.903</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\STRAT.png">
+      <PackagePath>Assets\coinImgres\STRAT.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\TIX.png">
+      <PackagePath>Assets\coinImgres\TIX.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.912</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\VTC.png">
+      <PackagePath>Assets\coinImgres\VTC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\WAVES.png">
+      <PackagePath>Assets\coinImgres\WAVES.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XEM.png">
+      <PackagePath>Assets\coinImgres\XEM.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.704</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XLM.png">
+      <PackagePath>Assets\coinImgres\XLM.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XMR.png">
+      <PackagePath>Assets\coinImgres\XMR.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.728</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\XRP.png">
+      <PackagePath>Assets\coinImgres\XRP.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.757</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\coinImgres\ZEC.png">
+      <PackagePath>Assets\coinImgres\ZEC.png</PackagePath>
+      <Modified>2018-01-18T03:57:14.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -549,9 +681,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-07-20T15:07:22.805</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2018-01-14T13:11:08.103</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.xr.xml">
       <PackagePath>CoinProfet.xr.xml</PackagePath>
-      <Modified>2018-01-17T18:05:26.414</Modified>
+      <Modified>2018-01-18T05:50:49.965</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -560,11 +696,11 @@
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-17T18:05:54.651</Modified>
+      <Modified>2018-01-18T05:50:53.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\CoinProfet.exe">
       <PackagePath>CoinProfet.exe</PackagePath>
-      <Modified>2018-01-17T18:06:33.629</Modified>
+      <Modified>2018-01-18T05:50:54.023</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -5,17 +5,28 @@
     xmlns:local="using:CoinProfet"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded" Height="Auto" Width="Auto" d:DesignWidth="1189.333">
+    mc:Ignorable="d" Loaded="Page_Loaded" Height="Auto" Width="Auto" d:DesignWidth="1189.333" >
 
     <Grid Background="#FF303030" Margin="0">
         <TextBlock x:Name="tradePrice" HorizontalAlignment="Left" Margin="307,107,0,0" TextWrapping="Wrap" Text="19,300,000" VerticalAlignment="Top" Height="40" Width="408" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black"/>
-        <ListView HorizontalAlignment="Left" Height="850" VerticalAlignment="Top" Width="300">
+        <ListView x:Name="CoinListView" ItemsSource="{x:Bind coinViewModel.coins}" HorizontalAlignment="Left" Width="300">
             <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Candle">
-                    <SymbolIcon Symbol="Audio" Margin="8,8,0,8"/>
-                    <!--<StackPanel>
-                        
-                    </StackPanel>-->
+                <DataTemplate x:DataType="local:Coin">
+                    <Grid Height="64" Width="300" Margin="0" HorizontalAlignment="Left" >
+                        <Ellipse Width="40" Height="40" Margin="8" HorizontalAlignment="Left">
+                            <!--<Ellipse.Fill>
+                                <ImageBrush ImageSource="{x:Bind  Converter=x:}" Stretch="Fill"/>
+                            </Ellipse.Fill>-->
+                        </Ellipse>
+                        <StackPanel Margin="64,8,64,8">
+                            <TextBlock Text="{x:Bind name}" Foreground="White" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind fullName}" Foreground="White" FontSize="8"/>
+                            <TextBlock Text="{x:Bind tradePrice}" Foreground="White"/>
+                        </StackPanel>
+                        <TextBlock HorizontalAlignment="Right" Text="{x:Bind deltaValue}" VerticalAlignment="Center" FlowDirection="RightToLeft" Margin="25" FontWeight="Bold" DataContextChanged="TextBlock_DataContextChanged"  />
+                        <Canvas/>
+
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -28,6 +39,7 @@
         <TextBlock x:Name="logger" Margin="307,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Height="85"/>
         <TextBlock x:Name="deltaPrevDay" HorizontalAlignment="Left" Margin="307,147,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <TextBlock x:Name="coinFullName" HorizontalAlignment="Left" Margin="307,87,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top"/>
+        <Grid Margin="307,172,10,90" FocusVisualPrimaryBrush="#FF151515" Background="#FF292929"/>
 
     </Grid>
 </Page>
