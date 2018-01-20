@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -102,26 +103,5 @@ namespace CoinProfet
         }
         
     }
-    public class CoinViewModel
-    {
-        public ObservableCollection<Coin> coins = new ObservableCollection<Coin>();
-        //public ObservableCollection<Coin> Coins { get { return this.coins; } set {coins = coin }; }
-
-        private void CoinsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            var x = e.NewItems;
-        }
-        public CoinViewModel(Coin[] coinList)
-        {
-            for (int i = 0; i < coinList.Length; i++)
-                this.coins.Add(coinList[i]);
-        }
-    }
-    public class CoinComparer : IComparer<Coin>
-    {
-        public int Compare(Coin x, Coin y)
-        {
-            return x.deltaValue < y.deltaValue ? 1 : x.deltaValue == y.deltaValue ? 0 : -1;
-        }
-    }
+    
 }

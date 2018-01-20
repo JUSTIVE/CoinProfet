@@ -11,8 +11,14 @@
     <Grid Background="#FF464958" Margin="0">
 
         <controls:DropShadowPanel OffsetX="0" HorizontalAlignment="Left" Width="320" BlurRadius="20.0" OffsetY="0" Color="Black" ShadowOpacity="0.3">
-            <ListView x:ConnectionId='7' Background="#FF292C3B"  x:Name="CoinListView"                                            HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListView x:ConnectionId='7' Background="#FF292C3B"  x:Name="CoinListView"                                                        HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
+                    
                     <DataTemplate                        >
                         <Grid x:ConnectionId='8' Height="64" Width="300" Margin="0" HorizontalAlignment="Left" >
                             <controls:RoundImageEx x:ConnectionId='9' Width="40" Height="40" Margin="8" HorizontalAlignment="Left" CornerRadius="20" BorderBrush="White"                         />
@@ -37,21 +43,21 @@
             </ListView>
         </controls:DropShadowPanel>
         <TextBlock x:ConnectionId='2' x:Name="logger" Margin="307,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Height="85"/>
-        <controls:DropShadowPanel Margin="357,190,54,112" HorizontalContentAlignment="Stretch" BlurRadius="10" ShadowOpacity="0.3" >
-            <Grid FocusVisualPrimaryBrush="#FF151515" Background="#FF292929" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        <controls:DropShadowPanel Margin="357,190,54,112" HorizontalContentAlignment="Stretch" BlurRadius="10" ShadowOpacity="0.8" >
+            <Grid FocusVisualPrimaryBrush="#FF151515" Background="#FFE1E1E1" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="4"/>
         </controls:DropShadowPanel>
-        
+
         <controls:DropShadowPanel Margin="400,33,0,0" Width="300" Height="200" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ShadowOpacity="0.3" BlurRadius="10" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Grid Background="White" Margin="5" Height="180" CornerRadius="5">
+            <Grid Background="White" Margin="0" Height="180" CornerRadius="4" Padding="10">
                 <TextBlock x:ConnectionId='3' x:Name="coinName" Margin="0,10,0,0" TextWrapping="Wrap" Text="BTC" VerticalAlignment="Top" Height="71" FontSize="72" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" FocusVisualPrimaryBrush="Black" HorizontalAlignment="Left" Width="245">
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.15"/>
                     </TextBlock.Foreground>
                 </TextBlock>
                 <TextBlock x:ConnectionId='4' x:Name="coinFullName" HorizontalAlignment="Left" Margin="0,81,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top" Foreground="Black" Width="191"/>
-                <StackPanel Orientation="Horizontal"  Height="40" Width="auto" Margin="0,0,0,59" VerticalAlignment="Bottom" >
+                <StackPanel Orientation="Horizontal"  Height="40" Width="230" Margin="0,108,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
                     <TextBlock x:ConnectionId='5' x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000" Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
-                    <TextBlock x:ConnectionId='6' x:Name="deltaPrevDay" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="+100%" />
+                    <TextBlock x:ConnectionId='6' x:Name="deltaPrevDay" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="+100%" VerticalAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Grid>
         </controls:DropShadowPanel>

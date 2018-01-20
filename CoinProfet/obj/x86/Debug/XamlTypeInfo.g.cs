@@ -178,7 +178,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             _typeNameTable[18] = "CoinProfet.MainPage";
             _typeNameTable[19] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[20] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[21] = "CoinProfet.CoinViewModel";
+            _typeNameTable[21] = "CoinProfet.MainPage.CoinViewModel";
 
             _typeTable = new global::System.Type[22];
             _typeTable[0] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel);
@@ -202,7 +202,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             _typeTable[18] = typeof(global::CoinProfet.MainPage);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[20] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[21] = typeof(global::CoinProfet.CoinViewModel);
+            _typeTable[21] = typeof(global::CoinProfet.MainPage.CoinViewModel);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -371,7 +371,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
                 xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  CoinProfet.CoinViewModel
+            case 21:   //  CoinProfet.MainPage.CoinViewModel
                 userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
@@ -614,7 +614,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
         private void set_18_MainPage_coinViewModel(object instance, object Value)
         {
             var that = (global::CoinProfet.MainPage)instance;
-            that.coinViewModel = (global::CoinProfet.CoinViewModel)Value;
+            that.coinViewModel = (global::CoinProfet.MainPage.CoinViewModel)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -749,7 +749,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
                 break;
             case "CoinProfet.MainPage.coinViewModel":
                 userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CoinProfet.MainPage");
-                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "coinViewModel", "CoinProfet.CoinViewModel");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "coinViewModel", "CoinProfet.MainPage.CoinViewModel");
                 xamlMember.Getter = get_18_MainPage_coinViewModel;
                 xamlMember.Setter = set_18_MainPage_coinViewModel;
                 break;

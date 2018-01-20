@@ -36,7 +36,6 @@ namespace CoinProfet
             this.InitializeComponent();
             Coin.initCoin();
             
-            
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
     
         }
@@ -110,6 +109,7 @@ namespace CoinProfet
 
             Coin.initPrevDayTradePriceAsync();
             this.coinViewModel = new CoinViewModel(Coin.coins);
+            CoinListView.ItemsSource = coinViewModel.coins;
             await Task.Run(() => UpdateInfo());
             
         }
@@ -133,14 +133,15 @@ namespace CoinProfet
                 }
                 
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
-                    CoinListView.ItemsSource = coinViewModel.coins;
+                    //CoinListView.ItemsSource = coinViewModel.coins;
+                    //coinViewModel.coins.Clear();
                     for (int i = 0; i < Coin.coins.Length; i++)
-                        coinViewModel.coins[i]=(Coin.coins[i]);
+                        coinViewModel.coins[i] =(Coin.coins[i]);
                     
                 });
-                
+                //CoinListView.bin
                 await Task.Delay(300);
-                
+                 
             }
             
         }
@@ -156,6 +157,28 @@ namespace CoinProfet
             else
                 (sender as TextBlock).Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
 
+        }
+        public class CoinViewModel
+        {
+            public ObservableCollection<Coin> coins { get; set; } = new ObservableCollection<Coin>();
+            //public ObservableCollection<Coin> Coins { get { return this.coins; } set {coins = coin }; }
+
+            private void CoinsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+            {
+                var x = e.NewItems;
+            }
+            public CoinViewModel(Coin[] coinList)
+            {
+                for (int i = 0; i < coinList.Length; i++)
+                    this.coins.Add(coinList[i]);
+            }
+        }
+        public class CoinComparer : IComparer<Coin>
+        {
+            public int Compare(Coin x, Coin y)
+            {
+                return x.deltaValue < y.deltaValue ? 1 : x.deltaValue == y.deltaValue ? 0 : -1;
+            }
         }
     }
 }
