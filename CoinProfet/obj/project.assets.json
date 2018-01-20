@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     "UAP,Version=v10.0.14393": {
       "HtmlAgilityPack/1.6.13": {
@@ -6243,9 +6243,6 @@
       },
       "runtime.win10-arm-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-arm-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-arm-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -11662,9 +11659,6 @@
       },
       "runtime.win10-x64-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x64-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x64-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -17087,9 +17081,6 @@
       },
       "runtime.win10-x86-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x86-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x86-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -29154,45 +29145,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BenKim\\.nuget\\packages\\": {}
+    "C:\\Users\\이창희\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
+      "projectUniqueName": "C:\\Users\\이창희\\Documents\\Visual Studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
       "projectName": "CoinProfet",
-      "projectPath": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
-      "outputPath": "C:\\Users\\BenKim\\documents\\visual studio 2017\\Projects\\CoinProfet\\CoinProfet\\obj\\",
+      "projectPath": "C:\\Users\\이창희\\Documents\\Visual Studio 2017\\Projects\\CoinProfet\\CoinProfet\\CoinProfet.csproj",
+      "packagesPath": "C:\\Users\\이창희\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\이창희\\Documents\\Visual Studio 2017\\Projects\\CoinProfet\\CoinProfet\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\이창희\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
       "originalTargetFrameworks": [
         "uap10.0.14393"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "uap10.0.14393": {
           "projectReferences": {}
         }
-      }
-    },
-    "dependencies": {
-      "HtmlAgilityPack": {
-        "target": "Package",
-        "version": "1.6.13"
-      },
-      "Microsoft.NETCore.UniversalWindowsPlatform": {
-        "target": "Package",
-        "version": "6.0.6"
-      },
-      "Microsoft.Toolkit.Uwp": {
-        "target": "Package",
-        "version": "2.1.1"
-      },
-      "Microsoft.Toolkit.Uwp.UI": {
-        "target": "Package",
-        "version": "2.1.1"
-      },
-      "Microsoft.Toolkit.Uwp.UI.Controls": {
-        "target": "Package",
-        "version": "2.1.1"
       }
     },
     "frameworks": {
@@ -29200,23 +29184,23 @@
         "dependencies": {
           "HtmlAgilityPack": {
             "target": "Package",
-            "version": "1.6.13"
+            "version": "[1.6.13, )"
           },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
-            "version": "6.0.6"
+            "version": "[6.0.6, )"
           },
           "Microsoft.Toolkit.Uwp": {
             "target": "Package",
-            "version": "2.1.1"
+            "version": "[2.1.1, )"
           },
           "Microsoft.Toolkit.Uwp.UI": {
             "target": "Package",
-            "version": "2.1.1"
+            "version": "[2.1.1, )"
           },
           "Microsoft.Toolkit.Uwp.UI.Controls": {
             "target": "Package",
-            "version": "2.1.1"
+            "version": "[2.1.1, )"
           }
         }
       }

@@ -29,9 +29,12 @@
                             </Ellipse.Fill>-->
 
                             <StackPanel Margin="64,8,64,8">
+                                <StackPanel.Resources>
+                                    <local:DoubleFormatConverter x:Key="PriceConverter" />
+                                </StackPanel.Resources>
                                 <TextBlock x:ConnectionId='11'                      Foreground="White" FontWeight="Bold"/>
                                 <TextBlock x:ConnectionId='12'                          Foreground="White" FontSize="8"/>
-                                <TextBlock x:ConnectionId='13'                            Foreground="White"/>
+                                <TextBlock Text="{Binding tradePrice, Converter={StaticResource PriceConverter}}" Foreground="White"/>
                             </StackPanel>
                             <TextBlock x:ConnectionId='10' x:Name="ListviewDeltaValue" HorizontalAlignment="Right"                            VerticalAlignment="Center" Margin="25" FontWeight="Bold"                                                             />
                             <Canvas/>
