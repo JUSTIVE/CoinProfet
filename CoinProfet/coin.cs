@@ -76,7 +76,7 @@ namespace CoinProfet
         {
             for (int i = 0; i < 34; i++) { 
                 coins[i] = new Coin((CoinType)i);
-                coins[i].imgres = "Assets/coinImgres" + ((CoinType)i).ToString()+".png";
+                coins[i].imgres = "Assets/coinImgres/" + ((CoinType)i).ToString()+".png";
             }
         }
         public static async void initPrevDayTradePriceAsync()

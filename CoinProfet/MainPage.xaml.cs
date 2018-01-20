@@ -183,7 +183,6 @@ namespace CoinProfet
 
         private void ListviewDeltaValue_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
         {
-            logger.Text = (args.NewValue as Coin).deltaValue.ToString()+"\n";
             if ((args.NewValue as Coin).deltaValue < 0)
                 ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
             else if ((args.NewValue as Coin).deltaValue == 0)
