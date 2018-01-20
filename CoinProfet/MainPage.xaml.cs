@@ -149,13 +149,13 @@ namespace CoinProfet
         private void TextBlock_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
         {
             logger.Text += ((string)args.NewValue) + "\n";
-
+            
             if (double.Parse((string)args.NewValue) < 0)
-                (sender as TextBlock).Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
+                (sender as TextBlock).FocusVisualPrimaryBrush = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
             else if (double.Parse((string)args.NewValue) == 0)
-                (sender as TextBlock).Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                (sender as TextBlock).FocusVisualPrimaryBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             else
-                (sender as TextBlock).Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
+                (sender as TextBlock).FocusVisualPrimaryBrush = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
 
         }
         public class CoinViewModel
@@ -179,6 +179,17 @@ namespace CoinProfet
             {
                 return x.deltaValue < y.deltaValue ? 1 : x.deltaValue == y.deltaValue ? 0 : -1;
             }
+        }
+
+        private void ListviewDeltaValue_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+            logger.Text = (args.NewValue as Coin).deltaValue.ToString()+"\n";
+            if ((args.NewValue as Coin).deltaValue < 0)
+                ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
+            else if ((args.NewValue as Coin).deltaValue == 0)
+                ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+            else
+                ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
         }
     }
 }

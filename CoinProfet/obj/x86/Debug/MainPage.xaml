@@ -6,7 +6,7 @@
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"                      Height="Auto" Width="Auto" d:DesignWidth="1189.333" >
+    mc:Ignorable="d"                      Height="Auto" Width="Auto" d:DesignWidth="1920" >
 
     <Grid Background="#FF464958" Margin="0">
 
@@ -33,7 +33,7 @@
                                 <TextBlock x:ConnectionId='12'                          Foreground="White" FontSize="8"/>
                                 <TextBlock x:ConnectionId='13'                            Foreground="White"/>
                             </StackPanel>
-                            <TextBlock x:ConnectionId='10' x:Name="ListviewDeltaValue" HorizontalAlignment="Right"                            VerticalAlignment="Center" Margin="25" FontWeight="Bold"                                                    />
+                            <TextBlock x:ConnectionId='10' x:Name="ListviewDeltaValue" HorizontalAlignment="Right"                            VerticalAlignment="Center" Margin="25" FontWeight="Bold"                                                             />
                             <Canvas/>
 
                         </Grid>
