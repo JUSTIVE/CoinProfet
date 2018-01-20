@@ -135,9 +135,11 @@ namespace CoinProfet
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
                     //CoinListView.ItemsSource = coinViewModel.coins;
                     //coinViewModel.coins.Clear();
-                    for (int i = 0; i < Coin.coins.Length; i++)
-                        coinViewModel.coins[i] =(Coin.coins[i]);
-                    
+                    for (int i = 0; i < Coin.coins.Length; i++) {
+                        coinViewModel.coins[i].deltaValue = (Coin.coins[i]).deltaValue;
+                        coinViewModel.coins[i].tradePrice = (Coin.coins[i]).tradePrice;
+                    }
+
                 });
                 //CoinListView.bin
                 await Task.Delay(300);
