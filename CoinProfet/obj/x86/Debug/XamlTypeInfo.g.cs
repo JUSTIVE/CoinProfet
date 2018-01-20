@@ -156,7 +156,7 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[22];
             _typeNameTable[0] = "Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentControl";
             _typeNameTable[2] = "Double";
@@ -167,12 +167,20 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             _typeNameTable[7] = "Windows.UI.Composition.CompositionShadow";
             _typeNameTable[8] = "Windows.UI.Composition.CompositionObject";
             _typeNameTable[9] = "Windows.UI.Composition.CompositionBrush";
-            _typeNameTable[10] = "CoinProfet.MainPage";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[13] = "CoinProfet.CoinViewModel";
+            _typeNameTable[10] = "Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx";
+            _typeNameTable[11] = "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase";
+            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[13] = "Boolean";
+            _typeNameTable[14] = "Int32";
+            _typeNameTable[15] = "Windows.UI.Xaml.Media.Imaging.DecodePixelType";
+            _typeNameTable[16] = "Windows.UI.Xaml.Media.Stretch";
+            _typeNameTable[17] = "Windows.UI.Xaml.Media.ImageSource";
+            _typeNameTable[18] = "CoinProfet.MainPage";
+            _typeNameTable[19] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[20] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[21] = "CoinProfet.CoinViewModel";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[22];
             _typeTable[0] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
             _typeTable[2] = typeof(global::System.Double);
@@ -183,10 +191,18 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             _typeTable[7] = typeof(global::Windows.UI.Composition.CompositionShadow);
             _typeTable[8] = typeof(global::Windows.UI.Composition.CompositionObject);
             _typeTable[9] = typeof(global::Windows.UI.Composition.CompositionBrush);
-            _typeTable[10] = typeof(global::CoinProfet.MainPage);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[13] = typeof(global::CoinProfet.CoinViewModel);
+            _typeTable[10] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx);
+            _typeTable[11] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[13] = typeof(global::System.Boolean);
+            _typeTable[14] = typeof(global::System.Int32);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Media.Imaging.DecodePixelType);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.Media.Stretch);
+            _typeTable[17] = typeof(global::Windows.UI.Xaml.Media.ImageSource);
+            _typeTable[18] = typeof(global::CoinProfet.MainPage);
+            _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[20] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[21] = typeof(global::CoinProfet.CoinViewModel);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -222,7 +238,8 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
         }
 
         private object Activate_0_DropShadowPanel() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel(); }
-        private object Activate_10_MainPage() { return new global::CoinProfet.MainPage(); }
+        private object Activate_10_RoundImageEx() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx(); }
+        private object Activate_18_MainPage() { return new global::CoinProfet.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -293,23 +310,68 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  CoinProfet.MainPage
+            case 10:   //  Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx
+                userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase"));
+                userType.Activator = Activate_10_RoundImageEx;
+                userType.AddMemberName("CornerRadius");
+                xamlType = userType;
+                break;
+
+            case 11:   //  Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase
+                userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
+                userType.AddMemberName("Source");
+                userType.AddMemberName("IsInitialized");
+                userType.AddMemberName("DecodePixelHeight");
+                userType.AddMemberName("DecodePixelType");
+                userType.AddMemberName("DecodePixelWidth");
+                userType.AddMemberName("Stretch");
+                userType.AddMemberName("IsCacheEnabled");
+                userType.AddMemberName("PlaceholderSource");
+                userType.AddMemberName("PlaceholderStretch");
+                xamlType = userType;
+                break;
+
+            case 12:   //  Windows.UI.Xaml.Controls.Control
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 13:   //  Boolean
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  Int32
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 15:   //  Windows.UI.Xaml.Media.Imaging.DecodePixelType
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  Windows.UI.Xaml.Media.Stretch
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 17:   //  Windows.UI.Xaml.Media.ImageSource
+                xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 18:   //  CoinProfet.MainPage
                 userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_MainPage;
+                userType.Activator = Activate_18_MainPage;
                 userType.AddMemberName("coinViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.Page
+            case 19:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.UserControl
+            case 20:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  CoinProfet.CoinViewModel
+            case 21:   //  CoinProfet.CoinViewModel
                 userType = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
@@ -449,12 +511,107 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel)instance;
             that.OffsetZ = (global::System.Double)Value;
         }
-        private object get_8_MainPage_coinViewModel(object instance)
+        private object get_8_RoundImageEx_CornerRadius(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx)instance;
+            return that.CornerRadius;
+        }
+        private void set_8_RoundImageEx_CornerRadius(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx)instance;
+            that.CornerRadius = (global::System.Double)Value;
+        }
+        private object get_9_ImageExBase_Source(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.Source;
+        }
+        private void set_9_ImageExBase_Source(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.Source = (global::System.Object)Value;
+        }
+        private object get_10_ImageExBase_IsInitialized(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.IsInitialized;
+        }
+        private object get_11_ImageExBase_DecodePixelHeight(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.DecodePixelHeight;
+        }
+        private void set_11_ImageExBase_DecodePixelHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.DecodePixelHeight = (global::System.Int32)Value;
+        }
+        private object get_12_ImageExBase_DecodePixelType(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.DecodePixelType;
+        }
+        private void set_12_ImageExBase_DecodePixelType(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.DecodePixelType = (global::Windows.UI.Xaml.Media.Imaging.DecodePixelType)Value;
+        }
+        private object get_13_ImageExBase_DecodePixelWidth(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.DecodePixelWidth;
+        }
+        private void set_13_ImageExBase_DecodePixelWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.DecodePixelWidth = (global::System.Int32)Value;
+        }
+        private object get_14_ImageExBase_Stretch(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.Stretch;
+        }
+        private void set_14_ImageExBase_Stretch(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.Stretch = (global::Windows.UI.Xaml.Media.Stretch)Value;
+        }
+        private object get_15_ImageExBase_IsCacheEnabled(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.IsCacheEnabled;
+        }
+        private void set_15_ImageExBase_IsCacheEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.IsCacheEnabled = (global::System.Boolean)Value;
+        }
+        private object get_16_ImageExBase_PlaceholderSource(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.PlaceholderSource;
+        }
+        private void set_16_ImageExBase_PlaceholderSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.PlaceholderSource = (global::Windows.UI.Xaml.Media.ImageSource)Value;
+        }
+        private object get_17_ImageExBase_PlaceholderStretch(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            return that.PlaceholderStretch;
+        }
+        private void set_17_ImageExBase_PlaceholderStretch(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase)instance;
+            that.PlaceholderStretch = (global::Windows.UI.Xaml.Media.Stretch)Value;
+        }
+        private object get_18_MainPage_coinViewModel(object instance)
         {
             var that = (global::CoinProfet.MainPage)instance;
             return that.coinViewModel;
         }
-        private void set_8_MainPage_coinViewModel(object instance, object Value)
+        private void set_18_MainPage_coinViewModel(object instance, object Value)
         {
             var that = (global::CoinProfet.MainPage)instance;
             that.coinViewModel = (global::CoinProfet.CoinViewModel)Value;
@@ -521,11 +678,80 @@ namespace CoinProfet.CoinProfet_XamlTypeInfo
                 xamlMember.Getter = get_7_DropShadowPanel_OffsetZ;
                 xamlMember.Setter = set_7_DropShadowPanel_OffsetZ;
                 break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx.CornerRadius":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "CornerRadius", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_8_RoundImageEx_CornerRadius;
+                xamlMember.Setter = set_8_RoundImageEx_CornerRadius;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.Source":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "Source", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_9_ImageExBase_Source;
+                xamlMember.Setter = set_9_ImageExBase_Source;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.IsInitialized":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "IsInitialized", "Boolean");
+                xamlMember.Getter = get_10_ImageExBase_IsInitialized;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.DecodePixelHeight":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "DecodePixelHeight", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_11_ImageExBase_DecodePixelHeight;
+                xamlMember.Setter = set_11_ImageExBase_DecodePixelHeight;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.DecodePixelType":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "DecodePixelType", "Windows.UI.Xaml.Media.Imaging.DecodePixelType");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_12_ImageExBase_DecodePixelType;
+                xamlMember.Setter = set_12_ImageExBase_DecodePixelType;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.DecodePixelWidth":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "DecodePixelWidth", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_13_ImageExBase_DecodePixelWidth;
+                xamlMember.Setter = set_13_ImageExBase_DecodePixelWidth;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.Stretch":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "Stretch", "Windows.UI.Xaml.Media.Stretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_14_ImageExBase_Stretch;
+                xamlMember.Setter = set_14_ImageExBase_Stretch;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.IsCacheEnabled":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "IsCacheEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_15_ImageExBase_IsCacheEnabled;
+                xamlMember.Setter = set_15_ImageExBase_IsCacheEnabled;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.PlaceholderSource":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "PlaceholderSource", "Windows.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_16_ImageExBase_PlaceholderSource;
+                xamlMember.Setter = set_16_ImageExBase_PlaceholderSource;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase.PlaceholderStretch":
+                userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.ImageExBase");
+                xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "PlaceholderStretch", "Windows.UI.Xaml.Media.Stretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_17_ImageExBase_PlaceholderStretch;
+                xamlMember.Setter = set_17_ImageExBase_PlaceholderStretch;
+                break;
             case "CoinProfet.MainPage.coinViewModel":
                 userType = (global::CoinProfet.CoinProfet_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CoinProfet.MainPage");
                 xamlMember = new global::CoinProfet.CoinProfet_XamlTypeInfo.XamlMember(this, "coinViewModel", "CoinProfet.CoinViewModel");
-                xamlMember.Getter = get_8_MainPage_coinViewModel;
-                xamlMember.Setter = set_8_MainPage_coinViewModel;
+                xamlMember.Getter = get_18_MainPage_coinViewModel;
+                xamlMember.Setter = set_18_MainPage_coinViewModel;
                 break;
             }
             return xamlMember;

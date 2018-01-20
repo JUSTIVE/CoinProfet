@@ -14,9 +14,10 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="FocusVisualPrimaryBrush" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
@@ -31,21 +32,32 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="FocusVisualPrimaryBrush" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="FlowDirection" />
       <RootEvent Name="DataContextChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
@@ -66,15 +78,14 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.RoundImageEx">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas" />
     <RootType FullName="CoinProfet.MainPage" />

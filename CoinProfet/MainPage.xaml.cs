@@ -35,7 +35,7 @@ namespace CoinProfet
         {
             this.InitializeComponent();
             Coin.initCoin();
-            this.coinViewModel = new CoinViewModel(Coin.coins);
+            
             
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
     
@@ -87,11 +87,13 @@ namespace CoinProfet
             {
                 if (coinType == Coin.CoinType.SNT)
                 {
-                    coinFullName.Text = ((Coin.CoinFullName)((int)coinType)).ToString();
-                    coinName.Text = Coin.coins[(int)coinType].name;
-                    tradePrice.Text = Coin.coins[(int)coinType].candles.Last().tradePrice.ToString();
-                    double deltaValue = (Math.Round((100 * (Coin.coins[(int)coinType].prevDayTradePrice - Coin.coins[(int)coinType].candles.Last().tradePrice))
-                        / Coin.coins[(int)coinType].prevDayTradePrice, 2) * -1.0f);
+
+                int index = Array.IndexOf(Coin.coins,(Array.Find(Coin.coins, c => { return c.name == Coin.CoinType.SNT.ToString();})));
+                    coinFullName.Text = ((Coin.CoinFullName)((int)index)).ToString();
+                    coinName.Text = Coin.coins[index].name;
+                    tradePrice.Text = Coin.coins[index].candles.Last().tradePrice.ToString();
+                    double deltaValue = (Math.Round((100 * (Coin.coins[index].prevDayTradePrice - Coin.coins[index].candles.Last().tradePrice))
+                        / Coin.coins[index].prevDayTradePrice, 2) * -1.0f);
                     deltaPrevDay.Text = deltaValue.ToString("#0.#0") + "%";
                     if (deltaValue < 0)
                         deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
@@ -122,6 +124,8 @@ namespace CoinProfet
                     {
                         await loadCoinData(coinType, 10);
                     }
+                    //CoinComparer CC = new CoinComparer();
+                    //Array.Sort<Coin>(Coin.coins, CC);
                 }
                 catch (Exception exception)
                 {
@@ -129,13 +133,13 @@ namespace CoinProfet
                 }
                 
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
-                    //coinViewModel.coins.Clear();
                     CoinListView.ItemsSource = coinViewModel.coins;
                     for (int i = 0; i < Coin.coins.Length; i++)
                         coinViewModel.coins[i]=(Coin.coins[i]);
+                    
                 });
                 
-                await Task.Delay(150);
+                await Task.Delay(300);
                 
             }
             

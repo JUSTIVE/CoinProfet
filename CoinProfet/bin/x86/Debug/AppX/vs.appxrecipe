@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-18T10:11:19.424</Modified>
+      <Modified>2018-01-20T12:06:50.021</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.exe">
       <PackagePath>entrypoint\CoinProfet.exe</PackagePath>
-      <Modified>2018-01-18T10:11:17.010</Modified>
+      <Modified>2018-01-20T12:06:47.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\.nuget\packages\HtmlAgilityPack\1.6.13\lib\uap10.0\HtmlAgilityPack.dll">
       <PackagePath>HtmlAgilityPack.dll</PackagePath>
@@ -763,7 +763,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\CoinProfet.xr.xml">
       <PackagePath>CoinProfet.xr.xml</PackagePath>
-      <Modified>2018-01-18T10:11:16.685</Modified>
+      <Modified>2018-01-18T12:05:32.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -920,11 +920,11 @@
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-18T10:11:18.585</Modified>
+      <Modified>2018-01-20T12:06:48.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\BenKim\documents\visual studio 2017\Projects\CoinProfet\CoinProfet\bin\x86\Debug\Core\CoinProfet.exe">
       <PackagePath>CoinProfet.exe</PackagePath>
-      <Modified>2018-01-18T10:11:19.413</Modified>
+      <Modified>2018-01-20T12:06:50.012</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -7,25 +7,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded" Height="Auto" Width="Auto" d:DesignWidth="1189.333" >
-    
-    <Grid Background="#FF303030" Margin="0">
-        
+
+    <Grid Background="#FF464958" Margin="0">
+
         <controls:DropShadowPanel OffsetX="0" HorizontalAlignment="Left" Width="320" BlurRadius="20.0" OffsetY="0" Color="Black" ShadowOpacity="0.3">
-            <ListView Background="#FF303030"  x:Name="CoinListView" ItemsSource="{x:Bind coinViewModel.coins}" HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListView Background="#FF292C3B"  x:Name="CoinListView" ItemsSource="{x:Bind coinViewModel.coins}" HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:Coin">
                         <Grid Height="64" Width="300" Margin="0" HorizontalAlignment="Left" >
-                            <Ellipse Width="40" Height="40" Margin="8" HorizontalAlignment="Left">
-                                <!--<Ellipse.Fill>
+                            <controls:RoundImageEx Width="40" Height="40" Margin="8" HorizontalAlignment="Left" CornerRadius="20" BorderBrush="White" Source="{x:Bind imgres}"/>
+
+
+                            <!--<Ellipse.Fill>
                                 <ImageBrush ImageSource="{x:Bind  Converter=x:}" Stretch="Fill"/>
                             </Ellipse.Fill>-->
-                            </Ellipse>
+
                             <StackPanel Margin="64,8,64,8">
                                 <TextBlock Text="{x:Bind name}" Foreground="White" FontWeight="Bold"/>
                                 <TextBlock Text="{x:Bind fullName}" Foreground="White" FontSize="8"/>
                                 <TextBlock Text="{x:Bind tradePrice}" Foreground="White"/>
                             </StackPanel>
-                            <TextBlock HorizontalAlignment="Right" Text="{x:Bind deltaValue}" VerticalAlignment="Center" FlowDirection="RightToLeft" Margin="25" FontWeight="Bold" DataContextChanged="TextBlock_DataContextChanged"  />
+                            <TextBlock x:Name="ListviewDeltaValue" HorizontalAlignment="Right" Text="{x:Bind deltaValue}" VerticalAlignment="Center" Margin="25" FontWeight="Bold" DataContextChanged="TextBlock_DataContextChanged"  />
                             <Canvas/>
 
                         </Grid>
@@ -34,18 +36,24 @@
 
             </ListView>
         </controls:DropShadowPanel>
-
-        <TextBlock x:Name="tradePrice" HorizontalAlignment="Left" Margin="307,107,0,0" TextWrapping="Wrap" Text="19,300,000" VerticalAlignment="Top" Height="40" Width="408" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black"/>
-        <TextBlock x:Name="coinName" HorizontalAlignment="Left" Margin="307,10,0,0" TextWrapping="Wrap" Text="BTC" VerticalAlignment="Top" Height="153" Width="413" FontSize="144" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="White" Opacity="0.15"/>
-            </TextBlock.Foreground>
-        </TextBlock>
-        <TextBlock x:Name="deltaPrevDay" HorizontalAlignment="Left" Margin="307,147,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="coinFullName" HorizontalAlignment="Left" Margin="307,87,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top"/>
         <TextBlock x:Name="logger" Margin="307,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Height="85"/>
         <controls:DropShadowPanel Margin="357,190,54,112" HorizontalContentAlignment="Stretch" BlurRadius="10" ShadowOpacity="0.3" >
             <Grid FocusVisualPrimaryBrush="#FF151515" Background="#FF292929" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </controls:DropShadowPanel>
+        
+        <controls:DropShadowPanel Margin="400,33,0,0" Width="300" Height="200" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ShadowOpacity="0.3" BlurRadius="10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid Background="White" Margin="5" Height="180" CornerRadius="5">
+                <TextBlock x:Name="coinName" Margin="0,10,0,0" TextWrapping="Wrap" Text="BTC" VerticalAlignment="Top" Height="71" FontSize="72" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" FocusVisualPrimaryBrush="Black" HorizontalAlignment="Left" Width="245">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.15"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock x:Name="coinFullName" HorizontalAlignment="Left" Margin="0,81,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top" Foreground="Black" Width="191"/>
+                <StackPanel Orientation="Horizontal"  Height="40" Width="auto" Margin="0,0,0,59" VerticalAlignment="Bottom" >
+                    <TextBlock x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000" Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
+                    <TextBlock x:Name="deltaPrevDay" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="+100%" />
+                </StackPanel>
+            </Grid>
         </controls:DropShadowPanel>
 
     </Grid>

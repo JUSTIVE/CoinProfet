@@ -69,12 +69,13 @@ namespace CoinProfet
         public double prevDayTradePrice { get; set; }
         public double tradePrice { get; set; }
         public double deltaValue { get; set; }
-        public BitmapImage imgres;
+        public string imgres { get; set; }
+
         public static void initCoin()
         {
             for (int i = 0; i < 34; i++) { 
                 coins[i] = new Coin((CoinType)i);
-                //coins[i].imgres = new BitmapImage("Assets/coinImgres" + ((CoinType)i).ToString()+".png");
+                coins[i].imgres = "Assets/coinImgres" + ((CoinType)i).ToString()+".png";
             }
         }
         public static async void initPrevDayTradePriceAsync()
@@ -115,7 +116,12 @@ namespace CoinProfet
             for (int i = 0; i < coinList.Length; i++)
                 this.coins.Add(coinList[i]);
         }
-        
-
+    }
+    public class CoinComparer : IComparer<Coin>
+    {
+        public int Compare(Coin x, Coin y)
+        {
+            return x.deltaValue < y.deltaValue ? 1 : x.deltaValue == y.deltaValue ? 0 : -1;
+        }
     }
 }
