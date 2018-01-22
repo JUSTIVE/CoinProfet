@@ -31,11 +31,17 @@ namespace CoinProfet
     public sealed partial class MainPage : Page
     {
         public CoinViewModel coinViewModel { get; set; }
+        private int currentCoin=0;
         public MainPage()
         {
             this.InitializeComponent();
             Coin.initCoin();
+
+            Coin.initPrevDayTradePriceAsync();
+            this.coinViewModel = new CoinViewModel(Coin.coins);
+            CoinListView.ItemsSource = coinViewModel.coins;
             
+
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
     
         }
@@ -82,37 +88,34 @@ namespace CoinProfet
             {
                 logger.Text += ex.ToString();
             }
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-            {
-                if (coinType == Coin.CoinType.SNT)
-                {
-
-                int index = Array.IndexOf(Coin.coins,(Array.Find(Coin.coins, c => { return c.name == Coin.CoinType.SNT.ToString();})));
-                    coinFullName.Text = ((Coin.CoinFullName)((int)index)).ToString();
-                    coinName.Text = Coin.coins[index].name;
-                    tradePrice.Text = Coin.coins[index].candles.Last().tradePrice.ToString();
-                    double deltaValue = (Math.Round((100 * (Coin.coins[index].prevDayTradePrice - Coin.coins[index].candles.Last().tradePrice))
-                        / Coin.coins[index].prevDayTradePrice, 2) * -1.0f);
-                    deltaPrevDay.Text = deltaValue.ToString("#0.#0") + "%";
-                    if (deltaValue < 0)
-                        deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
-                    else if (deltaValue == 0)
-                        deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-                    else
-                        deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
-                }
-            });
+            
         }
 
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
-            Coin.initPrevDayTradePriceAsync();
-            this.coinViewModel = new CoinViewModel(Coin.coins);
-            CoinListView.ItemsSource = coinViewModel.coins;
             await Task.Run(() => UpdateInfo());
             
+
+        }
+        private async void updateCurrentCoinAsync()
+        {
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
+            {
+                int index = Array.IndexOf(Coin.coins, (Array.Find(Coin.coins, c => { return c.name ==((Coin.CoinType)currentCoin).ToString(); })));
+                coinFullName.Text = ((Coin.CoinFullName)((int)index)).ToString();
+                coinName.Text = Coin.coins[index].name;
+                tradePrice.Text = Coin.coins[index].candles.Last().tradePrice.ToString();
+                double deltaValue = (Math.Round((100 * (Coin.coins[index].prevDayTradePrice - Coin.coins[index].candles.Last().tradePrice))
+                    / Coin.coins[index].prevDayTradePrice, 2) * -1.0f);
+                deltaPrevDay.Text = deltaValue.ToString("#0.#0") + "%";
+                if (deltaValue < 0)
+                    deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 33, 150, 243));
+                else if (deltaValue == 0)
+                    deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                else
+                    deltaPrevDay.Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
+            });
         }
         private async void UpdateInfo()
         {
@@ -130,21 +133,19 @@ namespace CoinProfet
                 }
                 catch (Exception exception)
                 {
-
+                    logger.Text += exception.ToString();
                 }
                 
-                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
-                    //CoinListView.ItemsSource = coinViewModel.coins;
-                    //coinViewModel.coins.Clear();
-                    
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () => {
+                    for (int i = 0; i < Coin.coins.Length; i++)
+                    {
+                        
+                        coinViewModel.coins[i].deltaValue = (Coin.coins[i]).deltaValue;
+                        coinViewModel.coins[i].tradePrice = (Coin.coins[i]).tradePrice;
+                    }
 
                 });
-                for (int i = 0; i < Coin.coins.Length; i++)
-                {
-                    coinViewModel.coins[i].deltaValue = (Coin.coins[i]).deltaValue;
-                    coinViewModel.coins[i].tradePrice = (Coin.coins[i]).tradePrice;
-                }
-                //CoinListView.bin
+                updateCurrentCoinAsync();
                 await Task.Delay(10);
                  
             }
@@ -165,9 +166,9 @@ namespace CoinProfet
         }
         public class CoinViewModel
         {
+           
             public ObservableCollection<Coin> coins { get; set; } = new ObservableCollection<Coin>();
-            //public ObservableCollection<Coin> Coins { get { return this.coins; } set {coins = coin }; }
-
+            //public ObservableCollection<Coin> CoinCollection { get { return coins; }set { coins = value;BindingOperations.EnableCollectionSynchronization(coins) } }
             private void CoinsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
             {
                 var x = e.NewItems;
@@ -194,6 +195,11 @@ namespace CoinProfet
                 ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
             else
                 ((TextBlock)sender).Foreground = new SolidColorBrush(Color.FromArgb(255, 244, 67, 54));
+        }
+
+        private void CoinListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            currentCoin = CoinListView.SelectedIndex;
         }
     }
 }

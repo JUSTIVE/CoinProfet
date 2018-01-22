@@ -13,7 +13,7 @@
     <Grid Background="#FF464958" Margin="0">
 
         <controls:DropShadowPanel OffsetX="0" HorizontalAlignment="Left" Width="320" BlurRadius="20.0" OffsetY="0" Color="Black" ShadowOpacity="0.3">
-            <ListView Background="#FF292C3B"  x:Name="CoinListView" ItemsSource="{x:Bind coinViewModel.coins,Mode=OneWay}" HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListView Background="#FF292C3B"  x:Name="CoinListView" ItemsSource="{x:Bind coinViewModel.coins,Mode=OneWay}" HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden" SelectionChanged="CoinListView_SelectionChanged">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
@@ -58,7 +58,7 @@
                 </TextBlock>
                 <TextBlock x:Name="coinFullName" HorizontalAlignment="Left" Margin="0,81,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top" Foreground="Black" Width="191"/>
                 <StackPanel Orientation="Horizontal"  Height="40" Width="230" Margin="0,108,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
-                    <TextBlock x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000" Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
+                    <TextBlock x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000 " Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
                     <TextBlock x:Name="deltaPrevDay" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="+100%" VerticalAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Grid>

@@ -13,9 +13,11 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
     </RootType>
+    <RootType FullName="CoinProfet.DoubleFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
@@ -66,7 +68,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
@@ -79,6 +80,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetVerticalScrollBarVisibility" />
@@ -106,7 +108,6 @@
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas" />
-    <RootType FullName="CoinProfet.DoubleFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Converter" />
     </RootType>

@@ -7,11 +7,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"                      Height="Auto" Width="Auto" d:DesignWidth="1920" >
-
+    <Page.Resources>
+        <local:DoubleFormatConverter x:Key="PriceConverter" />
+    </Page.Resources>
     <Grid Background="#FF464958" Margin="0">
 
         <controls:DropShadowPanel OffsetX="0" HorizontalAlignment="Left" Width="320" BlurRadius="20.0" OffsetY="0" Color="Black" ShadowOpacity="0.3">
-            <ListView x:ConnectionId='7' Background="#FF292C3B"  x:Name="CoinListView"                                                        HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListView x:ConnectionId='7' Background="#FF292C3B"  x:Name="CoinListView"                                                        HorizontalAlignment="Left" Width="300" ScrollViewer.VerticalScrollBarVisibility="Hidden"                                                 >
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
@@ -29,9 +31,6 @@
                             </Ellipse.Fill>-->
 
                             <StackPanel Margin="64,8,64,8">
-                                <StackPanel.Resources>
-                                    <local:DoubleFormatConverter x:Key="PriceConverter" />
-                                </StackPanel.Resources>
                                 <TextBlock x:ConnectionId='11'                      Foreground="White" FontWeight="Bold"/>
                                 <TextBlock x:ConnectionId='12'                          Foreground="White" FontSize="8"/>
                                 <TextBlock Text="{Binding tradePrice, Converter={StaticResource PriceConverter}}" Foreground="White"/>
@@ -59,7 +58,7 @@
                 </TextBlock>
                 <TextBlock x:ConnectionId='4' x:Name="coinFullName" HorizontalAlignment="Left" Margin="0,81,0,0" TextWrapping="Wrap" Text="비트코인" VerticalAlignment="Top" Foreground="Black" Width="191"/>
                 <StackPanel Orientation="Horizontal"  Height="40" Width="230" Margin="0,108,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
-                    <TextBlock x:ConnectionId='5' x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000" Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
+                    <TextBlock x:ConnectionId='5' x:Name="tradePrice" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="19,300,000 " Width="auto" FontSize="36" FontWeight="Bold" FontFamily="Noto Sans CJK KR Black" Margin="0"/>
                     <TextBlock x:ConnectionId='6' x:Name="deltaPrevDay" Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="+100%" VerticalAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Grid>
